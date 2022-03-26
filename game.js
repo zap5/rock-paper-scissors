@@ -14,5 +14,9 @@ function computerPlay() {
             break;
     }
 
-    console.log(move);
+    return move;
 }
+
+function playRound(playerSelection, computerSelection) {
+    // do a thing
+  }
