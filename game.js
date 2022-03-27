@@ -66,6 +66,40 @@ function playRound(playerSelection, computerSelection) {
             rationale = scenario3
         }
     }
+    console.log(`You cast ${playerMove}.`);
+    console.log(`The computer cast ${compMove}.`);
+    console.log(`You ${outcome}! ${rationale}`);
 
-    return `You ${outcome}! ${rationale}.`
+    return outcome;
+  }
+
+function game() {
+    let humanScore = 0;
+    let compScore = 0;
+    
+    for (let i = 0; i < 5; i++) {
+        let humanMove = window.prompt("Choose rock, paper, or scissors.");
+        let round = playRound(humanMove, computerPlay());
+
+        if (round === 'Win') {
+            humanScore++;
+        }
+        else if (round === 'Lose') {
+            compScore++;
+        }
+
+        console.log(`The score is ${humanScore} to ${compScore}.`);
+    }
+
+    console.log(`Final score is ${humanScore} to ${compScore}.`);
+
+    if (humanScore > compScore) {
+        console.log(`You win the game!`);
+    }
+    else if (humanScore < compScore) {
+        console.log(`You lose the game.`);
+    }
+    else {
+        console.log(`The game is a draw.`);
+    }
   }
