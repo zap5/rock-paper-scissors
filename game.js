@@ -18,5 +18,18 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    // do a thing
+    let playerMove = playerSelection.toLowerCase();
+    let compMove = computerSelection;
+    let outcome = '';
+    let rationale = '';
+
+    // check if it's a tie
+
+    if (playerMove == compMove) {
+        outcome = 'Tie';
+        rationale = 'Both players cast the same move.';
+    }
+
+    // if not, check to see who won
+    // return string like `You ${outcome}! ${rationale}.`
   }
