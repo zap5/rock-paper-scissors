@@ -103,3 +103,5 @@ function game() {
         console.log(`The game is a draw.`);
     }
   }
+
+  game();
