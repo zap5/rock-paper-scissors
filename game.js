@@ -78,7 +78,7 @@ function game() {
     let compScore = 0;
     
     for (let i = 0; i < 5; i++) {
-        let humanMove = window.prompt("Choose rock, paper, or scissors.");
+        // let humanMove = window.prompt("Choose rock, paper, or scissors.");
         let round = playRound(humanMove, computerPlay());
 
         if (round === 'Win') {
